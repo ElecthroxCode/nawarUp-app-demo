@@ -1,0 +1,23 @@
+@import'/src/custom-colors/custom';
+
+
+
+section {
+    form {
+        width: 28rem;
+        height: 24rem;
+        background-color: white;
+        
+
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+            background-color: $new-first-color;
+        }
+
+        padding-bottom: 200px;
+    }
+
+    padding-top: 40px;
+    padding-bottom: 200px;
+}

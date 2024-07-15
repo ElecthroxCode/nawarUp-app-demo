@@ -1,0 +1,44 @@
+@import'/src/custom-colors/custom';
+
+.card{
+    .card-img-top{
+        max-height: 140px;
+    }
+
+    .btn{
+        background-color: $new-second-color;
+        
+        border-color: $new-first-color;
+    }
+    .card-footer{
+        .card-followers{
+            
+            .followers{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+                
+             }
+        }
+        .card-stars{
+        
+           .bi{
+                color: #D5AB55;
+           }
+         }
+    }
+    box-shadow: 0 .5rem 1rem rgba($new-first-color, .15);
+    transition: all .5;
+}
+
+.card:hover{
+    box-shadow: 0 1rem 3rem rgba($new-first-color, .22);
+    border-color: $new-third-color;
+    cursor: pointer;
+    .btn{
+        background-color: $new-first-color;
+        border-color: $new-third-color;
+    }
+}

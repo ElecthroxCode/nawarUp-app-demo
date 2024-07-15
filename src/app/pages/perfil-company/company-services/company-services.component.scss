@@ -1,0 +1,16 @@
+@import'/src/custom-colors/custom';
+
+.card{
+    max-width: 12rem;
+    .card-header{
+        background-color: $new-second-color;
+    }
+    border: 1px solid transparent;
+}
+.card:hover{
+    .card-header{
+        background-color: $new-third-color;
+    }
+    cursor: pointer;
+    border-color: $new-third-color;
+}

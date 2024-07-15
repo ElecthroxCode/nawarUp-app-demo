@@ -1,0 +1,120 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card mb-3">
+      <img src="https://media.sproutsocial.com/uploads/LinkedIn-Personal3A-Photo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Barbe Shop S.A</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+          This content is a little bit longer.</p>
+        <p><span [ngStyle]="highlight">Encargado: </span> Miguel Gazcón de Gazcurnia</p>
+        <p><span [ngStyle]="highlight">Horario: </span> Lunes a Viernes desde 8:00 a.m a 6:30 p.m</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="card-btn d-flex justify-content-between">
+          <!-- Button trigger modal - appointment -->
+          <button type="button" class="btn btn-primary btn-schudele" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Agenda tu cita</button>
+          <!-- Button show services -->
+          <button type="button" class="btn btn-primary btn-service" (click)="onService()">
+            Ver servicios
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" *ngIf="serviceActive" >
+      <div class="card-body">
+        <h5 class="card-title" >Servicios</h5>
+        <div class="container-card-service gap-3">
+          <app-company-services *ngFor="let item of [0, 0, 0, 0, 0]"></app-company-services>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col mb-3">
+    <div class="alert alert-primary" role="alert">
+      <h4 class="alert-heading" style="color:$new-first-color">Anuncio importante!</h4>
+      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+      <hr>
+      <p class="mb-0">*Este anuncio puede ser modificado en cualquier momento.</p>
+    </div>
+  </div>
+
+  <!-- Modal appointment -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agendando tu cita</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="d-flex">
+              <div >
+                <label for="exampleInputEmail1" class="form-label">¿Para cuando quieres tu cita?</label>
+                <div class="form-calendar">
+                  <input class="calendar" type="date" name="" id="">
+                </div>
+              </div>
+
+              <div class="container-hours">
+                <div>
+                  <label for="">¿A que hora?</label>
+                  <div class="title-hora-min">
+                    <span>Hora</span><span>Minutos</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="container-clock d-flex">
+                    <div class="container-hours-min d-flex">
+                      <select class="form-select hours" aria-label="Default select example">
+                        <option selected></option>
+                        <option *ngFor="let h of hours">{{h}}</option>
+
+                      </select>
+                      <p> : </p>
+                      <select class="form-select minutes" aria-label="Default select example">
+                        <option selected></option>
+                        <option *ngFor="let m of minutes">{{m}}</option>
+
+                      </select>
+                    </div>
+                    <div class="btn-group mb-3" role="group" aria-label="Basic radio toggle button group">
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-primary rounded-0" for="btnradio1">AM</label>
+
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                      <label class="btn btn-outline-primary rounded-0 " for="btnradio2">PM</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">¿Que servicio deseas?</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">¿Es a domicilio? Si es asi, escribe tu dirección.</label>
+              <input type="text" class="form-control" id="address" placeholder="Opcional">
+            </div>
+            <div class="mb-3">
+             
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Agendar</button>
+        </div>
+      </div>
+    </div>
+  </div>

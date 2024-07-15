@@ -1,0 +1,29 @@
+<div class="container pt-4">
+    <div >
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary rounded-0" for="btnradio1" (click)="onNewAccountCustomerFalse()">
+                Crear cuenta de empresa
+            </label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary rounded-0" for="btnradio2" (click)="onNewAccountCustomerTrue()">
+                Crear cuenta de cliente
+            </label>
+          </div>
+    </div>
+    <div class="row pb-4">
+        <ng-container *ngIf="newAccountClient; then isTrue else isFalse">
+        </ng-container>
+        
+        <ng-template #isTrue>
+          <app-customer-account></app-customer-account>
+        </ng-template>
+        
+        <ng-template #isFalse>
+            <app-company-account></app-company-account>
+        </ng-template>
+            
+    
+    </div>
+</div>

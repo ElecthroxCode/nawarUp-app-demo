@@ -1,0 +1,9 @@
+@import'/src/custom-colors/custom';
+
+
+
+
+   input[type="radio"]:checked + .btn {
+    color: #fff;
+    background: $new-first-color;
+}

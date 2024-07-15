@@ -1,0 +1,42 @@
+
+
+<div class="container-form d-flex justify-content-md-between">
+  <form>
+    <div class="pt-4">
+      <h4>Crear cuenta de empresa</h4>
+  </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre de tu empresa</label>
+      <input type="text" class="form-control" autocomplete="shipping name" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="manager" class="form-label">Nombre del encargado de tu empresa</label>
+      <input type="text" class="form-control" autocomplete="shipping name" id="manager">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Télefono de tu empresa</label>
+      <input type="tel" class="form-control" autocomplete="shipping tel" id="phone">
+    </div>
+    <div class="mb-3">
+      <label for="emailCompany" class="form-label">Correo elétronico  de tu empresa</label>
+      <input type="email" class="form-control" autocomplete="shipping email" id="emailCompany" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <div class="mb-3">
+      <label for="passwordRepit" class="form-label">Repetir contraseña</label>
+      <input type="password" class="form-control" id="passwordRepit">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="checkTermins">
+      <label class="form-check-label" for="checkTermins">Acepto terminos y condiciones</label>
+    </div>
+    <button type="submit" class="btn btn-primary rounded-0">Registrarme</button>
+  </form>
+  <div class="img-login" [ngStyle]="{backgroundImage: 'url('+imgLoginBackground+')'}">
+
+  </div>
+</div>

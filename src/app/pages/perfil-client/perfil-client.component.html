@@ -1,0 +1,64 @@
+<div class="container-perfil row">
+    <div class="col-sm-12 col-lg-8">
+        <div class="card mb-3">
+
+            <div class="card-header p-0">
+               <div class="img-header">
+                <img class="card-img-top" [src]="imgBackgoundHeader"
+                alt="...">
+                <div class="img-edit">
+                    <label for="img-back"><i class="bi bi-pencil-square"></i></label>
+                    <input type="file" id="img-back">
+                </div>
+               </div>
+            </div>
+
+            <div class="card-body data-personal">
+                <h5 class="card-title">Linda Caicedo</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content.
+                    This content is a little bit longer.</p>
+                <p><span [ngStyle]="highlight">Télefono: </span> 312 3455577</p>
+                <p><span [ngStyle]="highlight">Correo eléctronico: </span> mrs-linda@gmail.com</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo" [ngStyle]="{backgroundImage: 'url('+imgPerfil+')'}">
+           
+           <div class="file">
+            <label for="imgFile"><i class="bi bi-pencil-square"></i></label>
+            <input type="file"  id="imgFile">
+           </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Mis intereses</h5>
+                <div class="container-card d-flex d-wrap gap-3">
+                    <span class="badge-1 rounded-pill ">Belleza</span>
+                    <span class="badge-2 rounded-pill ">Uñas</span>
+                    <span class="badge-3 rounded-pill ">Moda</span>
+                    <span class="badge-4 rounded-pill ">Salud</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-12 col-lg-4 mb-3">
+
+
+        <div class="alert alert-primary" role="alert">
+            <h4 class="alert-heading">Anuncio importante!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+                longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">*Este anuncio puede ser modificado en cualquier momento.</p>
+        </div>
+
+
+    </div>

@@ -1,0 +1,33 @@
+
+<div class="d-flex justify-content-center flex-wrap gap-3" >
+
+    <div class="card rounded" (click)="onCompany()" style="width: 18rem;"  *ngFor="let item of [0, 0, 0, 0, 0, 0, 0, 0]">
+        <div class="card-header p-0 border-botton-0">
+          <img src="/assets/images/foto-card.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title pt-4">Barber Shop S.A</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <h6>Oferta desde <span [ngStyle]="{'color': priceOff}">$ 12,000</span></h6>
+          <a [routerLink]="['/new-company-menu']" class="btn btn-primary rounded-pill">Ver servicios
+
+          </a>
+          <div class="card-footer d-flex justify-content-between align-items-end border-top-0 bg-white pt-3">
+            <div class="card-followers d-flex">
+              <div class="followers" [ngStyle]="{backgroundImage:'url('+imgUrl+')'}"></div>
+              <div class="followers" [ngStyle]="{backgroundImage:'url('+imgUrl+')'}"></div>
+              <div class="followers" [ngStyle]="{backgroundImage:'url('+imgUrl+')'}"></div>
+              <div class="followers try" [ngStyle]="{'background-color':imgTry}">+4</div>
+            </div>
+            <div class="card-stars d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,163 @@
+@import'/src/custom-colors/custom';
+
+.card-body{
+    .btn-schudele, .btn-service{
+        background-color: #def7ff;
+        border: 1px solid $new-second-color;
+        border-radius: 26px;
+        padding: 3px 16px 6px; //top |rigth and left | bottom
+        max-width: 140px;
+        transition: all .5;
+    }
+    .btn-schudele{
+        color: $new-first-color;
+        font-weight: 500;
+    }
+    .btn-service{
+        color: $new-first-color;
+    }
+    .btn-schudele:hover, .btn-service:hover{
+        background-color: $new-first-color;
+        border-color: $new-third-color;
+        color: $new-fourth-color;
+        font-weight: 600;
+    }
+    .card-btn{
+        max-width: 270px;
+    }
+   .container-card-service{
+       display: flex;
+       flex-wrap: wrap;
+      
+   }
+  
+}
+
+.container-hours{
+    
+    margin-left: 40px;
+}
+
+    .form-calendar{
+        border: 1px solid transparent;
+        max-width: 199px;
+        
+        .calendar {
+            
+            font-family: “Helvetica”, arial, sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            border: none;
+            padding-left: 12px;
+            
+            }
+          
+            //modficamos el indicado de input calendar
+            input.calendar[type=date]::-webkit-calendar-picker-indicator {
+                font-size: 26px;
+                padding: 14px 16px;
+              }
+              //cambia el color de indicador y modificamos el cursor
+              input[type=date]::-webkit-calendar-picker-indicator:hover {
+                background-color: #F77C6A;//rgb(247, 124, 106) es el inverso de #088395
+                filter:invert(100%); //al aplicar el invert(100%) se vuelve #088395
+                color: $new-fourth-color; 
+                cursor: pointer;
+              }
+              
+             
+             
+              input.calendar[type=date]::-webkit-calendar-picker-indicator:active {
+                color: blue;
+              }
+            //
+                input:focus,  input.calendar:focus {
+
+                    outline:none !important;
+            
+                    outline-width: 0 !important;
+            
+                    box-shadow: none;
+            
+                    -moz-box-shadow: none;
+            
+                    -webkit-box-shadow: none;
+            
+                }
+            
+    }
+   .form-calendar:hover{
+        background-color: $new-second-color;
+   }
+
+.title-hora-min{
+    max-width: 166px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: $new-second-color;
+    
+    font-size: small;
+}
+.container-clock{
+    width: 280px;
+    border: 1px solid;
+    border-color: transparent;
+   
+    .container-hours-min{
+        min-width: 180px;
+    }
+    .form-select{
+        max-width: 30rem;
+        border: none;
+        margin-bottom: 10px;
+    }
+    //elimina el borde focus al seleccionar
+    input:focus, select:focus, select, input.form-control:focus {
+
+        outline:none !important;
+
+        outline-width: 0 !important;
+
+        box-shadow: none;
+
+        -moz-box-shadow: none;
+
+        -webkit-box-shadow: none;
+
+    }
+    .btn-group{
+        input[type="radio"]:checked + .btn-outline-primary {
+            color: #fff;
+            background: $new-second-color;
+        }
+       
+       .btn-outline-primary{
+        color: $new-first-color;
+        border: none;
+       }
+       border: 1px solid transparent;
+    }
+}
+.container-clock:hover{
+    border-color: $new-second-color;
+}
+
+.modal-footer{
+
+   
+    .btn-primary, .btn-secondary{
+        border: 1px solid;
+        border-radius: 26px;
+        padding: 3px 16px 6px; //top |rigth and left | bottom
+        max-width: 140px;
+        transition: all .5;
+    }
+    .btn-primary{
+        background-color: $new-second-color;
+    }
+    .btn-primary:hover{
+        background-color: $new-first-color;
+    }
+}

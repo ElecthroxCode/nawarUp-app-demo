@@ -1,0 +1,30 @@
+@import'/src/custom-colors/custom';
+
+.img-login{
+    width: 500px;
+   background-size: cover;
+   background-position: center;
+}
+
+.btn-primary{
+    width: 100%;
+    background-color: $new-first-color;
+}
+.btn-primary:hover{
+    
+    background-color: $new-third-color;
+    color: $new-first-color;
+    font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .img-login{
+        display: none;
+    }
+    .container-form{
+        justify-content: center;
+        form{
+            width: 90%;
+        }
+    }
+}

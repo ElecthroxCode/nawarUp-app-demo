@@ -1,0 +1,157 @@
+@import'/src/custom-colors/custom';
+
+
+.container-perfil {
+    position: relative;
+    
+    .img-edit{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        overflow: hidden;
+        display: inline-block;
+        
+        
+        label {
+            cursor: pointer;
+            padding: 1px 6px;
+            border-radius: 50%;
+        }
+        label:hover{
+            background-color: $new-third-color;
+        }
+       
+           
+       .bi{
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $new-first-color;
+        }
+    }
+    
+    
+    .data-personal{
+        padding-top: 54px;
+    }
+
+
+    .photo {
+        background-color: white;
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        position: absolute;
+        top: 18%;
+        left: 4%;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        background-size: cover;
+        background-position: center;
+
+        input{
+            color: transparent;
+        
+        }
+        .file{
+            overflow: hidden;
+            display: inline-block;
+            position: absolute;
+           left: 113px;
+           top: 100px;
+           label{
+            cursor: pointer;
+            padding: 1px 6px;
+           }
+           label:hover{
+            background-color: $new-third-color;
+            padding: 1px 6px;
+            border-radius: 50%;
+           }
+
+           .bi{
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $new-first-color;
+           }
+
+           
+        }
+        
+    }
+}
+.photo input[type="file"], .img-edit input[type="file"]{
+    display: none;
+}
+.container-card {
+    padding-top: 14px;
+
+    .badge-1,
+    .badge-2,
+    .badge-3,
+    .badge-4 {
+        padding: 2px 20px 3px 20px;
+        color: $new-first-color;
+        font-weight: 500;
+        font-size: small;
+    }
+
+    .badge-1 {
+        background-color: rgb(255, 140, 0, .157);
+        
+    }
+
+    .badge-2 {
+        background-color: rgb(148, 0, 211, .157);
+        
+    }
+
+    .badge-3 {
+        background-color: rgb(0, 0, 139, .157);
+        
+    }
+
+    .badge-4 {
+        background-color: rgb(0, 255, 127, .157);
+        
+    }
+}
+
+@media (max-width: 768px){
+    .container-perfil{
+        .photo{
+            width: 100px;
+            height: 100px;
+            top: 34px;
+            left: 36%;
+            .file{
+                top: 56px;
+                left: 70px;
+            }
+        }
+        .container-card{
+            flex-wrap: wrap;
+        }
+
+        .data-personal{
+            padding-top: 50px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .container-perfil{
+    
+    .photo{
+       
+        top: 110px;
+        left: 8%;
+        .file{
+            top: 56px;
+            left: 70px;
+        }
+    }
+
+   }
+
+
+  }
