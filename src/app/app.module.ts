@@ -17,6 +17,7 @@ import { CustomerAccountComponent } from './pages/new-accounts/customer-account/
 import { NewAccountsComponent } from './pages/new-accounts/new-accounts.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HelpComponent } from './pages/help/help.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -38,10 +39,12 @@ import { HelpComponent } from './pages/help/help.component';
     NewAccountsComponent,
     LoginComponent,
     HelpComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

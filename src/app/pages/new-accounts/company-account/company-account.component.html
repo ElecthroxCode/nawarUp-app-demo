@@ -1,38 +1,62 @@
 
 
 <div class="container-form d-flex justify-content-md-between">
-  <form>
+  <form  [formGroup]="formCompany" (ngSubmit)="onSubmit()" >
     <div class="pt-4">
       <h4>Crear cuenta de empresa</h4>
   </div>
     <div class="mb-3">
       <label for="name" class="form-label">Nombre de tu empresa</label>
-      <input type="text" class="form-control" autocomplete="shipping name" id="name">
+      <input formControlName="name" type="text" class="form-control" autocomplete="shipping name" id="name">
+      <div *ngIf="formCompany.get('name')?.invalid && formCompany.get('name')?.touched" class="text-danger">
+        El campo nombre es invalido.
+      </div>
     </div>
     <div class="mb-3">
       <label for="manager" class="form-label">Nombre del encargado de tu empresa</label>
-      <input type="text" class="form-control" autocomplete="shipping name" id="manager">
+      <input formControlName="manager" type="text" class="form-control" autocomplete="shipping name" id="manager">
+      <div *ngIf="formCompany.get('manager')?.invalid && formCompany.get('manager')?.touched" class="text-danger">
+        El campo manager es invalido.
+      </div>
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">Télefono de tu empresa</label>
-      <input type="tel" class="form-control" autocomplete="shipping tel" id="phone">
+      <input formControlName="phone" type="tel" class="form-control" autocomplete="shipping tel" id="phone">
+      <div *ngIf="formCompany.get('phone')?.invalid && formCompany.get('phone')?.touched" class="text-danger">
+        El campo de télefono es invalido.
+      </div>
     </div>
     <div class="mb-3">
       <label for="emailCompany" class="form-label">Correo elétronico  de tu empresa</label>
-      <input type="email" class="form-control" autocomplete="shipping email" id="emailCompany" aria-describedby="emailHelp">
+      <input formControlName="email" type="email" class="form-control" autocomplete="shipping email" id="emailCompany" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div *ngIf="formCompany.get('emal')?.invalid && formCompany.get('email')?.touched" class="text-danger">
+        El correo electronico es invalido.
+      </div>
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="password">
+      <input formControlName="password" type="password" class="form-control" id="password">
+      <div *ngIf="formCompany.get('password')?.invalid && formCompany.get('password')?.touched" class="text-danger">
+        La contraseña es incorrecta. Y debe ser como mínimo de 8 caracteres.
+      </div>
     </div>
     <div class="mb-3">
       <label for="passwordRepit" class="form-label">Repetir contraseña</label>
-      <input type="password" class="form-control" id="passwordRepit">
+      <input formControlName="passwordRepit" type="password" class="form-control" id="passwordRepit">
+      <div *ngIf="formCompany.get('passwordRepit')?.invalid && formCompany.get('passwordRepit')?.touched" class="text-danger">
+        El campo es invalido.
+      </div>
+      <div *ngIf="formCompany.errors?.['mismatch']" class="text-danger">
+        Las contraseñas no coinciden.
+      </div>
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="checkTermins">
+      <input formControlName="checkTermins" type="checkbox" class="form-check-input" id="checkTermins">
       <label class="form-check-label" for="checkTermins">Acepto terminos y condiciones</label>
+      <div *ngIf="formCompany.get('checkTermins')?.invalid && formCompany.get('checkTermins')?.touched" class="text-danger">
+        Debes aceptar los terminos y condiciones.
+      </div>
     </div>
     <button type="submit" class="btn btn-primary rounded-0">Registrarme</button>
   </form>

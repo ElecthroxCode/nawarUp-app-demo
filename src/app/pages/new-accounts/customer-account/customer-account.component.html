@@ -1,35 +1,56 @@
 
 
 <div class="container-form d-flex justify-content-md-between">
-  <form class="w-sm-100">
+  <form [formGroup]="formCustomer" (ngSubmit)="onSubmit()" class="w-sm-100">
     <div class="pt-4">
       <h4>Crear cuenta de cliente</h4>
   </div>
     <div class="mb-3">
       <label for="name" class="form-label">Escribe tu nombre completo</label>
-      <input type="text" class="form-control" id="name">
+      <input formControlName="name" type="text" class="form-control" id="name">
+      <div *ngIf="formCustomer.get('name')?.invalid && formCustomer.get('name')?.touched" class="text-danger">
+        Este campo es obligatorio.
+      </div>
     </div>
    
     <div class="mb-3">
       <label for="phone" class="form-label">Escribe tu número de télefono</label>
-      <input type="text" class="form-control" id="phone">
+      <input formControlName="phone" type="text" class="form-control" id="phone">
+      <div *ngIf="formCustomer.get('phone')?.invalid && formCustomer.get('phone')?.touched" class="text-danger">
+        Este campo es obligatorio.
+      </div>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Escribe tu correo eléctronico</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div *ngIf="formCustomer.get('email')?.invalid && formCustomer.get('email')?.touched" class="text-danger">
+        Debe ser un correo electronico válido.
+      </div>
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="password">
+      <input formControlName="password" type="password" class="form-control" id="password">
+      <div *ngIf="formCustomer.get('password')?.invalid && formCustomer.get('password')?.touched" class="text-danger">
+        La contraseña es obligatoria. Y debe ser minimo de 8 caracteres.
+      </div>
     </div>
     <div class="mb-3">
       <label for="passwordRepit" class="form-label">Repetir contraseña</label>
-      <input type="password" class="form-control" id="passwordRepit">
+      <input formControlName="passwordRepit" type="password" class="form-control" id="passwordRepit">
+      <div *ngIf="formCustomer.get('passwordRepit')?.invalid && formCustomer.get('passwordRepit')?.touched" class="text-danger">
+        Este campo es obligatorio.
+      </div>
+      <div *ngIf="formCustomer.errors?.['mismatch']" class="text-danger">
+        Las contraseñas no coinciden.
+      </div>
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="checkTermins">
+      <input formControlName="checkTermins" type="checkbox" class="form-check-input" id="checkTermins">
       <label class="form-check-label" for="checkTermins">Acepto terminos y condiciones</label>
+      <div *ngIf="formCustomer.get('checkTermins')?.invalid && formCustomer.get('checkTermins')?.touched" class="text-danger">
+        Debes aceptar los terminos y condiciones.
+      </div>
     </div>
     <button type="submit" class="btn btn-primary rounded-0">Registrarme</button>
   </form>
