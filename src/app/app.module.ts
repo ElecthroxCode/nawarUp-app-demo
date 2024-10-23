@@ -18,6 +18,9 @@ import { NewAccountsComponent } from './pages/new-accounts/new-accounts.componen
 import { LoginComponent } from './pages/login/login.component';
 import { HelpComponent } from './pages/help/help.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompanyServiceService } from './services/company-service.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -44,9 +47,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [CompanyServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
